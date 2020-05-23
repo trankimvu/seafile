@@ -912,7 +912,7 @@ def generate_breakpad_symbols():
 
     # generate seafile gui breakpad symbols
     seafile_gui_name = 'seafile-applet.exe'
-    seafile_gui_symbol_name = 'seafile_client.exe.sym-%s' % conf[CONF_VERSION]
+    seafile_gui_symbol_name = 'seafile-applet.exe.sym-%s' % conf[CONF_VERSION]
     seafile_gui_symbol_output = os.path.join(seafile_gui_src, seafile_gui_symbol_name)
 
     if run('python %s --projectSrc %s --name %s --output %s'
