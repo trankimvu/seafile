@@ -920,9 +920,10 @@ def generate_breakpad_symbols():
         error('Error when generating seafile gui client breakpad symbol')
 
     # move symbols to output directory
-    dst_symbol_file = os.path.join(conf[CONF_OUTPUTDIR], seafile_symbol_name)
-    must_copy(seafile_symbol_output, dst_symbol_file)
-    must_copy(seafile_gui_symbol_output, dst_symbol_file)
+    dst_seafile_symbol_file = os.path.join(conf[CONF_OUTPUTDIR], seafile_symbol_name)
+    dst_seafile_gui_symbol_file = os.path.join(conf[CONF_OUTPUTDIR], seafile_gui_symbol_name)
+    must_copy(seafile_symbol_output, dst_seafile_symbol_file)
+    must_copy(seafile_gui_symbol_output, dst_seafile_gui_symbol_file)
 
 
 def build_msi():
